@@ -1,5 +1,6 @@
 package algorithms;
 
+import metrics.PerformanceTracker;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,7 +8,9 @@ class MaxHeapTest {
 
     @Test
     void testInsertAndExtract() {
-        MaxHeap heap = new MaxHeap(10);
+        PerformanceTracker tracker = new PerformanceTracker();
+        MaxHeap heap = new MaxHeap(10, tracker);
+
         heap.insert(5);
         heap.insert(10);
         heap.insert(3);
@@ -19,13 +22,17 @@ class MaxHeapTest {
 
     @Test
     void testExtractFromEmptyHeap() {
-        MaxHeap heap = new MaxHeap(5);
+        PerformanceTracker tracker = new PerformanceTracker();
+        MaxHeap heap = new MaxHeap(5, tracker);
+
         assertThrows(IllegalStateException.class, heap::extractMax);
     }
 
     @Test
     void testSingleElement() {
-        MaxHeap heap = new MaxHeap(5);
+        PerformanceTracker tracker = new PerformanceTracker();
+        MaxHeap heap = new MaxHeap(5, tracker);
+
         heap.insert(42);
         assertEquals(42, heap.extractMax());
         assertTrue(heap.isEmpty());
@@ -33,7 +40,9 @@ class MaxHeapTest {
 
     @Test
     void testIncreaseKey() {
-        MaxHeap heap = new MaxHeap(5);
+        PerformanceTracker tracker = new PerformanceTracker();
+        MaxHeap heap = new MaxHeap(5, tracker);
+
         heap.insert(10);
         heap.insert(20);
         heap.insert(5);
@@ -44,14 +53,18 @@ class MaxHeapTest {
 
     @Test
     void testIncreaseKeyInvalid() {
-        MaxHeap heap = new MaxHeap(5);
+        PerformanceTracker tracker = new PerformanceTracker();
+        MaxHeap heap = new MaxHeap(5, tracker);
+
         heap.insert(10);
         assertThrows(IllegalArgumentException.class, () -> heap.increaseKey(0, 5));
     }
 
     @Test
     void testDuplicates() {
-        MaxHeap heap = new MaxHeap(5);
+        PerformanceTracker tracker = new PerformanceTracker();
+        MaxHeap heap = new MaxHeap(5, tracker);
+
         heap.insert(7);
         heap.insert(7);
         heap.insert(7);
@@ -62,10 +75,19 @@ class MaxHeapTest {
     }
 
     @Test
-    void testInsertBeyondCapacity() {
-        MaxHeap heap = new MaxHeap(2);
+    void testDynamicResizing() {
+        PerformanceTracker tracker = new PerformanceTracker();
+        MaxHeap heap = new MaxHeap(2, tracker); // starts small
+
+
         heap.insert(1);
         heap.insert(2);
-        assertThrows(IllegalStateException.class, () -> heap.insert(3));
+        heap.insert(3);
+        heap.insert(4);
+
+        assertEquals(4, heap.extractMax());
+        assertEquals(3, heap.extractMax());
+        assertEquals(2, heap.extractMax());
+        assertEquals(1, heap.extractMax());
     }
 }
