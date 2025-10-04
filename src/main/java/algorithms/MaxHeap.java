@@ -90,7 +90,7 @@ public class MaxHeap {
         heap[j] = temp;
     }
 
-    // 🔹 Dynamic resizing
+    // fix edges to work kushti
     private void ensureCapacity() {
         if (size >= heap.length) {
             int newCapacity = heap.length * 2;

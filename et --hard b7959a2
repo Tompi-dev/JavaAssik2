@@ -1,0 +1,18 @@
+[33m3928c84[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/optimization[m[33m, [m[1;31morigin/feature/optimization[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33mb7959a2[m HEAD@{1}: commit: docs(readme): usage instructions and complexity analysis
+[33m3928c84[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/optimization[m[33m, [m[1;31morigin/feature/optimization[m[33m)[m HEAD@{2}: commit: feat(optimization): optimized heapifyDown and finalized benchmark runner integration
+[33m7891262[m HEAD@{3}: commit: merge: resolved conflict in PerformanceTracker.java
+[33m2751d55[m HEAD@{4}: commit (merge): merge: resolved conflict in PerformanceTracker.java
+[33m3df4247[m HEAD@{5}: commit: fix: update PerformanceTracker before merging
+[33m5dc9bba[m[33m ([m[1;31morigin/feature/cli[m[33m, [m[1;31morigin/feature/algorithm[m[33m, [m[1;32mfeature/cli[m[33m, [m[1;32mfeature/algorithm[m[33m)[m HEAD@{6}: checkout: moving from feature/optimization to feature/optimization
+[33m5dc9bba[m[33m ([m[1;31morigin/feature/cli[m[33m, [m[1;31morigin/feature/algorithm[m[33m, [m[1;32mfeature/cli[m[33m, [m[1;32mfeature/algorithm[m[33m)[m HEAD@{7}: checkout: moving from feature/cli to feature/optimization
+[33m5dc9bba[m[33m ([m[1;31morigin/feature/cli[m[33m, [m[1;31morigin/feature/algorithm[m[33m, [m[1;32mfeature/cli[m[33m, [m[1;32mfeature/algorithm[m[33m)[m HEAD@{8}: checkout: moving from feature/algorithm to feature/cli
+[33m5dc9bba[m[33m ([m[1;31morigin/feature/cli[m[33m, [m[1;31morigin/feature/algorithm[m[33m, [m[1;32mfeature/cli[m[33m, [m[1;32mfeature/algorithm[m[33m)[m HEAD@{9}: commit: test(algorithm): comprehensive test suite with edge cases
+[33meedf35d[m HEAD@{10}: checkout: moving from feature/algorithm to feature/algorithm
+[33meedf35d[m HEAD@{11}: commit: feat(algorithm): baseline MaxHeap implementation
+[33mc18ab63[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{12}: checkout: moving from feature/metrics to feature/algorithm
+[33mb6cdc56[m[33m ([m[1;31morigin/feature/metrics[m[33m, [m[1;32mfeature/metrics[m[33m, [m[1;32malgorithm[m[33m)[m HEAD@{13}: commit: feat(metrics): add performance tracker and CSV exporter
+[33mc18ab63[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{14}: checkout: moving from feature/algorithm to feature/metrics
+[33mc18ab63[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{15}: checkout: moving from main to feature/algorithm
+[33mc18ab63[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{16}: Branch: renamed refs/heads/main to refs/heads/main
+[33mc18ab63[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{18}: commit (initial): init: maven project structure with pom.xml
